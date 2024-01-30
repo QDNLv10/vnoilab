@@ -1,15 +1,18 @@
 // https://codeforces.com/problemset/problem/1251/C
 
-void solve();
-
-int main() {
-  solve();
-  return 0;
-}
-
 #include <cstdio>
 #include <iostream>
 #include <string>
+
+void solve();
+
+int main() {
+  int n;
+  scanf("%d", &n);
+  for (int i = 0; i < n; ++i)
+    solve();
+  return 0;
+}
 
 void solve() {
   std::string even, odd, inp;
@@ -29,4 +32,5 @@ void solve() {
     else
       printf("%c", odd[io++]);
   }
+  printf("\n");
 }
