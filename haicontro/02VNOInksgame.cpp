@@ -29,15 +29,10 @@ void solve() {
   sortArr(b);
 
   int ia = 0, ib = n - 1;
-  int sum = 0;
   int best = (int)INFINITY;
 
-  while (ia < n || ib >= 0) {
-
-    if (ib < 0 || (ia < n && sum < 0))
-      sum = a[ia++] + b[ib];
-    else
-      sum = a[ia] + b[ib--];
+  while (ia < n - 1 || ib > 0) {
+    int sum = a[ia] + b[ib];
 
     best = std::min(best, abs(sum));
 
@@ -45,6 +40,11 @@ void solve() {
       printf("0\n");
       return;
     }
+
+    if (ib == 0 || (ia < n - 1 && sum <= 0))
+      ++ia;
+    else
+      --ib;
   }
 
   printf("%d\n", best);
