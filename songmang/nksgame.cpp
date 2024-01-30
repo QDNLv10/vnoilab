@@ -31,6 +31,8 @@ void solve() {
   int ia = 0, ib = n - 1;
   int best = (int)INFINITY;
 
+  // Song mảng loại 2
+
   while (ia < n - 1 || ib > 0) {
     int sum = a[ia] + b[ib];
 

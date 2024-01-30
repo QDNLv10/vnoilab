@@ -7,6 +7,9 @@ void tronMang(const Array &a, const Array &b) {
   int ia = 0, ib = 0;
   int na = a.size(), nb = b.size();
   Array c;
+
+  // Song mảng loại 1
+
   while (ia < na || ib < nb) {
     if (ib == nb || (ia < na && a[ia] < b[ib]))
       c.push_back(a[ia++]);

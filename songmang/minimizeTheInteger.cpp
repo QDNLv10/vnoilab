@@ -24,6 +24,8 @@ void solve() {
       even.push_back(c);
   }
 
+  // Song mảng loại 1
+
   int ie = 0, io = 0, ne = even.size(), no = odd.size();
   while (ie < ne || io < no) {
 

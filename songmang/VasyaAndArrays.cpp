@@ -31,6 +31,9 @@ void solve() {
   INT sum = 0;
   INT count = 0;
   INT ia = 0, ib = 0;
+
+  // Song mảng loại 1
+
   while (ia < m || ib < n) {
     if (ib == n || (ia < m && sum <= 0))
       sum += a[ia++];
