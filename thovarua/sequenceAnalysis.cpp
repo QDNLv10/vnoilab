@@ -37,9 +37,15 @@ void solve() {
     return false;
   };
 
+  INT count1 = 0;
+
   do {
     tortoise();
     hare()();
+
+    if (check(count1 += 1))
+      return;
+
   } while (tortoise.val != hare.val);
 
   Animal tortoise2 = start;

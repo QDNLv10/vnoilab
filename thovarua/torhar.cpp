@@ -11,12 +11,12 @@ int main() {
 
 #define INT long long
 
-struct animal {
+struct Animal {
   INT remainder, digit, divisor;
 
-  animal(INT num_, INT divisor_) : remainder(num_), divisor(divisor_) {}
+  Animal(INT num_, INT divisor_) : remainder(num_), divisor(divisor_) {}
 
-  animal &operator()() {
+  Animal &operator()() {
     digit = remainder * 10 / divisor;
     remainder = remainder * 10 % divisor;
     return *this;
@@ -30,7 +30,7 @@ void solve() {
   INT intpart = divident / divisor, remainder = divident % divisor;
   printf("%lld.", intpart);
 
-  animal tortoise(remainder, divisor), tortoise2(remainder, divisor),
+  Animal tortoise(remainder, divisor), tortoise2(remainder, divisor),
       hare(remainder, divisor);
 
   do {
